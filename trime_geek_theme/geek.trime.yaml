@@ -711,7 +711,7 @@ preset_keyboards:
       composing: , label_symbol: 'ic@symbol', symbol_text_size: 14, key_symbol_offset_x: 15, key_symbol_offset_y: -47, swipe_up: 'liquid_keyboard_default', key_text_size: "20", key_back_color: c3, key_text_color: tenter, width: 14}
       - {click: Command_L, label_symbol: 'ic@keyboard-settings-outline', key_symbol_offset_y: -47, popup: [ "Theme_settings" ], swipe_up: 'Theme_settings', key_back_color: c5, key_text_color: tenter}
       - {click: Control_L, label_symbol: 'ic@palette-outline', key_symbol_offset_y: -47, popup: [ "Color_switch"], swipe_up: 'Color_switch', key_text_size: "14", key_back_color: c5, key_text_color: th4}
-      - {click: space3, label_symbol: "ic@microphone-outline", key_symbol_offset_y: -47, ascii: space3, swipe_up: 'Mode_switch', swipe_down: 'Mode_switch', long_click: "VOICE_ASSIST", key_text_size: "12", symbol_text_size: 9, key_symbol_offset_x: 35, key_back_color: bkg, key_text_color: th1, width: 27}
+      - {click: space4, label_symbol: "ic@microphone-outline", key_symbol_offset_y: -47, ascii: space3, swipe_up: 'Mode_switch', swipe_down: 'Mode_switch', long_click: "VOICE_ASSIST", key_text_size: "12", symbol_text_size: 9, key_symbol_offset_x: 35, key_back_color: bkg, key_text_color: th1, width: 27}
       - {click: '.', label: '。', label_symbol: ',', swipe_up: ',', popup: ["Punct_switch"], key_back_color: bh4, key_text_color: th4}
       - {click: Alt_L, label_symbol: 'ic@web', key_symbol_offset_y: -47, popup: ["Menu", "IME_switch"], swipe_up: 'IME_switch', composing: Escape1, key_text_size: "14", key_back_color: c5, key_text_color: th4}
       - {click: Return, swipe_up: Escape, key_back_color: benter, key_text_color: tenter, width: 14}
@@ -820,6 +820,7 @@ preset_keys:
   space1: {label: '   ␣  ', slide_cursor: false, send: space} # 用于符号键盘
   space2: {label: ic@keyboard-space, slide_cursor: true, send: space}  #用于数字键盘空格的展现形式
   space3: {label: 'Space', slide_cursor: true, send: space} #主键盘空格键的英文模式
+  space4: {label: '空格', slide_cursor: true, send: space} #主键盘空格键的中文模式
   ClearAll: {label: 全清, text: "{Control+a}{BackSpace}"}
   ClearLine: {label: 清行, text: "{Shift+Home}{BackSpace}"}
   ClearWord: {label: 清词, text: "{Control+BackSpace}"}
