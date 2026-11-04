@@ -567,7 +567,7 @@ liquid_keyboard:
 
 tool_bar:
   button_spacing: 5 # 按钮间距
-  button_font: iconfont.ttf # 按钮字体
+  button_font: [iconfont.ttf] # 按钮字体
 
   # 左侧固定主按钮配置
   primary_button:
@@ -575,7 +575,7 @@ tool_bar:
     background:
       type: circle           # 高亮形状 (可选值: circle|rectangle)
       corner_radius: 10      # 圆角半径
-      bg_normal: 0x00        # 正常状态背景颜色
+      bg_normal: "0x00"        # 正常状态背景颜色
       bg_highlight: hilited_candidate_button_color  # 高亮状态背景色
       vertical_inset: 4      # 垂直方向内缩量
       horizontal_inset: 0    # 水平方向内缩量
@@ -685,19 +685,14 @@ preset_keyboards:
       - {click: s, popup: ["+", "±", "=", "≠", "≈"], label_symbol: '+', swipe_up: '+', hint: '=', swipe_down: '=', key_back_color: bh2, key_text_color: th2}
       - {click: d, popup: ["underdash-p", "-", "——"], label_symbol: '_', swipe_up: '_', hint: '-', swipe_down: '-', key_back_color: bh2, key_text_color: th2}
       - {click: f, popup: ["×", "÷"], label_symbol: '×', swipe_up: '×', hint: ' ÷', swipe_down: '÷', key_back_color: bh2, key_text_color: th2}
-      - {click: g, popup: ["?", "/", "¿"], label_symbol: '?', swipe_up: "?", hint: '/', swipe_down: '/', key_back_color: bh3, key_back_color: bh2, key_text_color: th2}
+      - {click: g, popup: ["?", "/", "¿"], label_symbol: '?', swipe_up: "?", hint: '/', swipe_down: '/', key_back_color: bh2, key_text_color: th2}
       - {click: h, popup: ["|", "backslash-p", "、"], label_symbol: '|', swipe_up: '|', hint: '\', swipe_down: '\', key_back_color: bh2, key_text_color: th2}
       - {click: j, popup: ['"', "'"], label_symbol: '""', swipe_up: '""{Left}', hint: "''", swipe_down: "''{Left}", key_back_color: bh2, key_text_color: th2}
       - {click: k, popup: ["(", ")", "[", "]"], label_symbol: '()', swipe_up: "(){Left}", hint: '[]', swipe_down: '[]{Left}', key_back_color: bh2, key_text_color: th2}
       - {click: l, popup: ["<", ">", "{", "}", "≤", "≥"], label_symbol: '{}', swipe_up: '{}{Left}', hint: '<>', swipe_down: '<>{Left}', key_back_color: bh2, key_text_color: th2}
       - {width: 0, key_back_color: bh2, key_text_color: th2}
     #  第三行
-      - {click: Shift_L, 
-      long_click: 'Shift_L', 
-      label_symbol: ' ', 
-      double_click: Shift_L3, 
-      composing: delimiter, 
-      hilited_key_back_color: benter, key_back_color: c1, key_text_color: th1}
+      - {click: Shift_L, long_click: 'Shift_L', label_symbol: ' ', double_click: Shift_L3, composing: delimiter, hilited_key_back_color: benter, key_back_color: c1, key_text_color: th1}
       - {click: z, popup: ["Escape"], label_symbol: 'ESC', swipe_up: 'Escape', hint: 'ic@checkbox-marked-outline', swipe_down: 'select_all', symbol_text_size: "8", key_hint_offset_y: -10, key_back_color: bh3, key_text_color: th3}
       - {click: x, popup: ["F11-p"], label_symbol: 'F11', swipe_up: 'F11', hint: 'ic@content-cut', swipe_down: 'cut', symbol_text_size: "8", key_hint_offset_y: -10, key_back_color: bh3, key_text_color: th3}
       - {click: c, popup: ["F12-p", "©"], label_symbol: 'F12', swipe_up: 'F12', hint: 'ic@checkbox-multiple-blank-outline', swipe_down: 'copy', symbol_text_size: "8", key_hint_offset_y: -10, key_back_color: bh3, key_text_color: th3}
@@ -707,13 +702,12 @@ preset_keyboards:
       - {click: m, popup: [":", ";"], label_symbol: ':', swipe_up: ':', hint: ';', swipe_down: ";", key_back_color: bh3, key_text_color: th3}
       - {click: BackSpace, swipe_up: 'ClearLine', swipe_down: 'Delete', swipe_left: 'ClearWord', key_back_color: c2, key_text_color: th1}
     #  第四行
-      - {click: Keyboard_number, long_click: 'liquid_keyboard_default',
-      composing: , label_symbol: 'ic@symbol', symbol_text_size: 14, key_symbol_offset_x: 15, key_symbol_offset_y: -47, swipe_up: 'liquid_keyboard_default', key_text_size: "20", key_back_color: c3, key_text_color: tenter, width: 14}
-      - {click: Command_L, label_symbol: 'ic@keyboard-settings-outline', key_symbol_offset_y: -47, popup: [ "Theme_settings" ], swipe_up: 'Theme_settings', key_back_color: c5, key_text_color: tenter}
-      - {click: Control_L, label_symbol: 'ic@palette-outline', key_symbol_offset_y: -47, popup: [ "Color_switch"], swipe_up: 'Color_switch', key_text_size: "14", key_back_color: c5, key_text_color: th4}
-      - {click: space4, label_symbol: "ic@microphone-outline", key_symbol_offset_y: -47, ascii: space3, swipe_up: 'Mode_switch', swipe_down: 'Mode_switch', long_click: "VOICE_ASSIST", key_text_size: "12", symbol_text_size: 9, key_symbol_offset_x: 35, key_back_color: bkg, key_text_color: th1, width: 27}
+      - {click: Keyboard_number, long_click: 'liquid_keyboard_default', label_symbol: 'ic@symbol', symbol_text_size: 14, key_symbol_offset_x: 15, key_symbol_offset_y: 0, swipe_up: 'liquid_keyboard_default', key_text_size: "20", key_back_color: c3, key_text_color: tenter, width: 14}
+      - {click: Command_L, label_symbol: 'ic@keyboard-settings-outline', key_symbol_offset_y: 0, popup: [ "Theme_settings" ], swipe_up: 'Theme_settings', key_back_color: c5, key_text_color: tenter}
+      - {click: Control_L, label_symbol: 'ic@palette-outline', key_symbol_offset_y: 0, popup: [ "Color_switch"], swipe_up: 'Color_switch', key_text_size: "14", key_back_color: c5, key_text_color: th4}
+      - {click: space4, label_symbol: "ic@microphone-outline", key_symbol_offset_y: 0, ascii: space3, swipe_up: 'Mode_switch', swipe_down: 'Mode_switch', long_click: "VOICE_ASSIST", key_text_size: "12", symbol_text_size: 9, key_symbol_offset_x: 35, key_back_color: bkg, key_text_color: th1, width: 27}
       - {click: '.', label: '。', label_symbol: ',', swipe_up: ',', popup: ["Punct_switch"], key_back_color: bh4, key_text_color: th4}
-      - {click: Alt_L, label_symbol: 'ic@web', key_symbol_offset_y: -47, popup: ["Menu", "IME_switch"], swipe_up: 'IME_switch', composing: Escape1, key_text_size: "14", key_back_color: c5, key_text_color: th4}
+      - {click: Alt_L, label_symbol: 'ic@web', key_symbol_offset_y: 0, popup: ["Menu", "IME_switch"], swipe_up: 'IME_switch', composing: Escape1, key_text_size: "14", key_back_color: c5, key_text_color: th4}
       - {click: Return, swipe_up: Escape, key_back_color: benter, key_text_color: tenter, width: 14}
 
   # letter:
@@ -844,7 +838,7 @@ preset_keys:
   cut: {label: ic@content-cut, functional: false, send: Control+x}
   copy: {label: ic@checkbox-multiple-blank-outline, functional: false, send: Control+c}
   paste: {label: ic@clipboard-text-outline, functional: false, send: Control+v}
-  paste_clip: {label: ic@clipboard-text-outline, send: function, command: clipboard}
+  paste_clip: {label: ic@clipboard-text-outline, send: FUNCTION, command: clipboard}
   paste_text: {label: 貼上文本, send: Control+Shift+Alt+v} #>=Android 6.0
   share_text: {label: 分享文本, send: Control+Alt+s} #>=Android 6.0
   redo: {label: ⤻, functional: false, send: Control+Shift+z} #>=Android 6.0
@@ -877,19 +871,19 @@ preset_keys:
   Keyboard_last: { label: 'ic@arrow-left-circle', functional: false, send: Eisu_toggle, select: .last }
   Keyboard_last_lock: { label: ic@keyboard-outline, send: Eisu_toggle, select: .last_lock } #直接切換到下一键盘
   Keyboard_last_lock1: { label: '↩', send: Eisu_toggle, select: .last_lock } #直接切換到下一键盘
-  liquid_keyboard_exit: {label: '  ⌨  ', send: function, command: liquid_keyboard, option: "-1"}  #退出liquidkeyboard
-  liquid_keyboard_default: { label: '全部', send: function, command: liquid_keyboard, option: "tabs" }
-  menu_keyboard: { label: 'ic@ic@tune-variant', send: function, command: menu_keyboard }
+  liquid_keyboard_exit: {label: '  ⌨  ', send: FUNCTION, command: liquid_keyboard, option: "-1"}  #退出liquidkeyboard
+  liquid_keyboard_default: { label: '全部', send: FUNCTION, command: liquid_keyboard, option: "tabs" }
+  menu_keyboard: { label: 'ic@ic@tune-variant', send: FUNCTION, command: menu_keyboard }
   Keyboard_func: { label: ic@tune-variant, functional: false, send: Eisu_toggle, select: func }
   Keyboard_func1: { label: ' ', functional: false, send: Eisu_toggle, select: func }
-  clipboard_window: { label: '📋', send: function, command: "clipboard_window" }
+  clipboard_window: { label: '📋', send: FUNCTION, command: "clipboard_window" }
   # rime状态
-  Mode_switch: {toggle: ascii_mode, functional: false, send: Mode_switch, states: [ 中, En ]}
-  Mode_switch1: {toggle: ascii_mode, functional: false, send: Mode_switch, states: [ 中/A, A/中 ]}
-  Zenkaku_Hankaku: {toggle: full_shape, send: Mode_switch, states: [ 半角, 全角 ]}
-  Henkan: {toggle: simplification, send: Mode_switch, states: [ 汉字, 汉字 ]}
-  Charset_switch: {toggle: extended_charset, send: Mode_switch, states: [ 常用, 增广 ]}
-  Punct_switch: {toggle: ascii_punct, send: Mode_switch, states: [ 。，, ．， ]}
+  Mode_switch: {toggle: ascii_mode, functional: false, send: SWITCH_CHARSET, states: [ 中, En ]}
+  Mode_switch1: {toggle: ascii_mode, functional: false, send: SWITCH_CHARSET, states: [ 中/A, A/中 ]}
+  Zenkaku_Hankaku: {toggle: full_shape, send: SWITCH_CHARSET, states: [ 半角, 全角 ]}
+  Henkan: {toggle: simplification, send: SWITCH_CHARSET, states: [ 汉字, 汉字 ]}
+  Charset_switch: {toggle: extended_charset, send: SWITCH_CHARSET, states: [ 常用, 增广 ]}
+  Punct_switch: {toggle: ascii_punct, send: SWITCH_CHARSET, states: [ 。，, ．， ]}
   # trime设置
   IME_switch: {label: 'ic@web', send: LANGUAGE_SWITCH} #彈出對話框選擇輸入法
   IME_last: {label: 上一输入法, send: LANGUAGE_SWITCH, select: .last} #直接切換到上一輸入法
@@ -906,21 +900,21 @@ preset_keys:
   Deploy: {label: 部署, command: broadcast, option: "com.osfans.trime.action.DEPLOY"}
   Deploy1: {label: "ic@restore", command: broadcast, option: "com.osfans.trime.action.DEPLOY"}
   # trime命令
-  Date: {label: 日期, send: function, command: date, option: " yyyy-MM-dd "}
-  Time: {label: 時間, send: function, command: date, option: "HH:mm:ss"} #時間： date 格式
-  TrimeApp: {label: 同文, send: function, command: run, option: "com.osfans.trime"} #運行程序: run 包名
-  TrimeCmp: {label: 同文組件, send: function, command: run, option: "com.osfans.trime/.Pref"} #運行程序指定組件: run 包名/組件名
-  Homepage: {label: ic@web, send: function, command: run, option: "https://github.com/osfans/trime"} #查看網頁: run 網址
-  ThemeRepo: {label: ic@github, send: function, command: run, option: "https://github.com/lesca/geek-ime/blob/main/trime_geek_theme"} #查看網頁: run 網址
-  YouDao: {label: 'ic@magnify', send: function, command: run, option: "https://dict.youdao.com/result?word=%4$s?lang=en"} #查看網頁: run 網址
-  Bing: {label: 'ic@magnify', send: function, command: run, option: "https://www.bing.com/search?q=%4$s"} #查看網頁: run 網址
-  Wiki: {label: 維基, send: function, command: run, option: "https://zh.wikipedia.org/wiki/%s"} #搜索網頁: %s或者%1$s爲當前字符
-  Google: {label: 谷歌, send: function, command: run, option: "https://www.google.com/search?q=%s"} #搜索網頁: %s或者%1$s爲當前字符
-  MoeDict: {label: 萌典, send: function, command: run, option: "https://www.moedict.tw/%3$s"} #搜索網頁: %3$s爲光標前字符
-  Baidu: {label: 百度搜索, send: function, command: run, option: "https://www.baidu.com/s?wd=%4$s"} #搜索網頁: %4$s爲光標前所有字符
-  Zdic: {label: 漢典, send: function, command: run, option: "http://www.zdic.net/sousuo/?q=%1$s"} #搜索網頁: %s或者%1$s爲當前字符
-  Zdic2: {label: 漢典, send: function, command: run, option: "http://www.zdic.net/sousuo/?q=%2$s"} #搜索網頁: %2$s爲當前輸入的編碼
-  WebSearch: {label: 搜索網頁, send: function, command: web_search, option: "%4$s"} #搜索，其他view、dial、edit、search等intent，參考安卓的intent文檔：https://developer.android.com/reference/android/content/Intent.html
+  Date: {label: 日期, send: FUNCTION, command: date, option: " yyyy-MM-dd "}
+  Time: {label: 時間, send: FUNCTION, command: date, option: "HH:mm:ss"} #時間： date 格式
+  TrimeApp: {label: 同文, send: FUNCTION, command: run, option: "com.osfans.trime"} #運行程序: run 包名
+  TrimeCmp: {label: 同文組件, send: FUNCTION, command: run, option: "com.osfans.trime/.Pref"} #運行程序指定組件: run 包名/組件名
+  Homepage: {label: ic@web, send: FUNCTION, command: run, option: "https://github.com/osfans/trime"} #查看網頁: run 網址
+  ThemeRepo: {label: ic@github, send: FUNCTION, command: run, option: "https://github.com/lesca/geek-ime/blob/main/trime_geek_theme"} #查看網頁: run 網址
+  YouDao: {label: 'ic@magnify', send: FUNCTION, command: run, option: "https://dict.youdao.com/result?word=%4$s?lang=en"} #查看網頁: run 網址
+  Bing: {label: 'ic@magnify', send: FUNCTION, command: run, option: "https://www.bing.com/search?q=%4$s"} #查看網頁: run 網址
+  Wiki: {label: 維基, send: FUNCTION, command: run, option: "https://zh.wikipedia.org/wiki/%s"} #搜索網頁: %s或者%1$s爲當前字符
+  Google: {label: 谷歌, send: FUNCTION, command: run, option: "https://www.google.com/search?q=%s"} #搜索網頁: %s或者%1$s爲當前字符
+  MoeDict: {label: 萌典, send: FUNCTION, command: run, option: "https://www.moedict.tw/%3$s"} #搜索網頁: %3$s爲光標前字符
+  Baidu: {label: 百度搜索, send: FUNCTION, command: run, option: "https://www.baidu.com/s?wd=%4$s"} #搜索網頁: %4$s爲光標前所有字符
+  Zdic: {label: 漢典, send: FUNCTION, command: run, option: "http://www.zdic.net/sousuo/?q=%1$s"} #搜索網頁: %s或者%1$s爲當前字符
+  Zdic2: {label: 漢典, send: FUNCTION, command: run, option: "http://www.zdic.net/sousuo/?q=%2$s"} #搜索網頁: %2$s爲當前輸入的編碼
+  WebSearch: {label: 搜索網頁, send: FUNCTION, command: web_search, option: "%4$s"} #搜索，其他view、dial、edit、search等intent，參考安卓的intent文檔：https://developer.android.com/reference/android/content/Intent.html
   Left1: {label: '⇦', send: Control+Left, repeatable: true, functional: false}
   Right1: {label: '⇨', send: Control+Right, repeatable: true, functional: false}
 
